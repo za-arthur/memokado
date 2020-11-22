@@ -34,9 +34,9 @@ if __name__ == "__main__":
 
         print("")
         print(term_to_check, end=":\n")
-        answer = input()
+        answer = input().lower()
 
-        if answer != term_to_check and answer in sample:
+        if answer != term_to_check.lower() and answer in (s.lower() for s in sample):
             print("CORRECT")
         else:
             print(", ".join(r for r in sample if r != term_to_check))
